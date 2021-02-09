@@ -22,6 +22,12 @@ class InitialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Aniversariantes"
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
+    }
+    
+    @objc func addTapped () {
+        print("Add button was tapped")
     }
     
     func configureTableView() {
@@ -43,10 +49,6 @@ extension InitialViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("celula selecionada")
     }
 
 }

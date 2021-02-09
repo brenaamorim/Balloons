@@ -16,14 +16,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         let navigationController = UINavigationController(rootViewController: InitialViewController())
-        navigationController.navigationBar.isTranslucent = false
-        navigationController.navigationBar.isOpaque = true
-        navigationController.navigationBar.shadowImage = UIImage()
+        navigationController.navigationBar.prefersLargeTitles = true
+        
+        let attrs = [
+               NSAttributedString.Key.foregroundColor: UIColor.textColor,
+            NSAttributedString.Key.font: UIFont.roundedFont(ofSize: 34, weight: .bold)
+           ]
+        navigationController.navigationBar.largeTitleTextAttributes = attrs as [NSAttributedString.Key: Any]
         
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         window?.windowScene = windowScene
-        
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

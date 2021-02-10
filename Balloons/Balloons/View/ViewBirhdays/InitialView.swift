@@ -56,9 +56,9 @@ class InitialView: UIView {
         name.font = .roundedFont(ofSize: 28, weight: .bold)
         return name
     }()
-    
+
     func setupConstraints() {
-        
+
         self.addSubview(backgroundImage)
         NSLayoutConstraint.activate([
             backgroundImage.topAnchor.constraint(equalTo: self.topAnchor),
@@ -66,7 +66,7 @@ class InitialView: UIView {
             backgroundImage.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             backgroundImage.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
-        
+
         self.addSubview(monthView)
         NSLayoutConstraint.activate([
             monthView.topAnchor.constraint(equalTo: self.topAnchor, constant: 148),
@@ -88,7 +88,7 @@ class InitialView: UIView {
             tableView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
-        
+
     }
     
 }

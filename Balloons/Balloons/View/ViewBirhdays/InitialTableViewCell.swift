@@ -87,42 +87,42 @@ class InitialTableViewCell: UITableViewCell {
         
         self.addSubview(cardView)
         NSLayoutConstraint.activate([
-            self.cardView.topAnchor.constraint(equalTo: self.topAnchor, constant: 14),
-            self.cardView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
-            self.cardView.heightAnchor.constraint(equalToConstant: 153),
-            self.cardView.widthAnchor.constraint(equalToConstant: 382)
+            cardView.topAnchor.constraint(equalTo: self.topAnchor, constant: 14),
+            cardView.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),
+            cardView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16),
+            cardView.heightAnchor.constraint(equalToConstant: 153)
         ])
         
         self.addSubview(personImage)
         NSLayoutConstraint.activate([
-            self.personImage.topAnchor.constraint(equalTo: cardView.topAnchor, constant: 34),
-            self.personImage.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 24),
-            self.personImage.heightAnchor.constraint(equalToConstant: 86),
-            self.personImage.widthAnchor.constraint(equalToConstant: 86)
+            personImage.topAnchor.constraint(equalTo: cardView.topAnchor, constant: 34),
+            personImage.leadingAnchor.constraint(equalTo: cardView.leadingAnchor, constant: 24),
+            personImage.heightAnchor.constraint(equalToConstant: 86),
+            personImage.widthAnchor.constraint(equalToConstant: 86)
         ])
         
         self.addSubview(name)
         NSLayoutConstraint.activate([
-            self.name.topAnchor.constraint(equalTo: personImage.topAnchor, constant: 12),
-            self.name.leadingAnchor.constraint(equalTo: personImage.trailingAnchor, constant: 16)
+            name.topAnchor.constraint(equalTo: personImage.topAnchor, constant: 12),
+            name.leadingAnchor.constraint(equalTo: personImage.trailingAnchor, constant: 16)
         ])
         
         self.addSubview(age)
         NSLayoutConstraint.activate([
-            self.age.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 2),
-            self.age.leadingAnchor.constraint(equalTo: name.leadingAnchor)
+            age.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 2),
+            age.leadingAnchor.constraint(equalTo: name.leadingAnchor)
         ])
 
         self.addSubview(separator)
         NSLayoutConstraint.activate([
-            self.separator.topAnchor.constraint(equalTo: age.topAnchor),
-            self.separator.leadingAnchor.constraint(equalTo: age.trailingAnchor, constant: 5)
+            separator.topAnchor.constraint(equalTo: age.topAnchor),
+            separator.leadingAnchor.constraint(equalTo: age.trailingAnchor, constant: 5)
         ])
 
         self.addSubview(birthday)
         NSLayoutConstraint.activate([
-            self.birthday.topAnchor.constraint(equalTo: separator.topAnchor),
-            self.birthday.leadingAnchor.constraint(equalTo: separator.trailingAnchor, constant: 5)
+            birthday.topAnchor.constraint(equalTo: separator.topAnchor),
+            birthday.leadingAnchor.constraint(equalTo: separator.trailingAnchor, constant: 5)
         ])
 
     }

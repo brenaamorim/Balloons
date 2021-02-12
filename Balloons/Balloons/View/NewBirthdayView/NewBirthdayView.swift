@@ -73,7 +73,7 @@ class NewBirthdayView: UIView {
     lazy var nameLabel: UITextField = {
         var name = UITextField()
         name.translatesAutoresizingMaskIntoConstraints = false
-        name.text = "Maria"
+        name.placeholder = "Nome"
         name.textColor = .textColor
         name.font = .systemFont(ofSize: 20, weight: .regular)
         return name
@@ -98,18 +98,15 @@ class NewBirthdayView: UIView {
         return icon
     }()
     
-    lazy var birthDate: UIDatePicker = {
-        var date = UIDatePicker()
+    lazy var birthDate: UITextField = {
+        var date = UITextField()
         date.translatesAutoresizingMaskIntoConstraints = false
-//        date.backgroundColor = UIColor.black
-        date.tintColor = .textColor
-        date.contentMode = .center
-        if #available(iOS 13.4, *) {
-            date.preferredDatePickerStyle = .compact
-        } else {
-            // Fallback on earlier versions
-        }
-        date.datePickerMode = .date
+        date.tintColor = .clear
+        date.placeholder = "Aniversário"
+        date.tintColor = .clear
+        date.textColor = .textColor
+        date.inputView = generatePicker()
+        date.font = .systemFont(ofSize: 20, weight: .regular)
         return date
     }()
     
@@ -135,11 +132,35 @@ class NewBirthdayView: UIView {
     lazy var numberLabel: UITextField = {
         var name = UITextField()
         name.translatesAutoresizingMaskIntoConstraints = false
-        name.text = "8512346789"
+        name.keyboardType = UIKeyboardType.phonePad
+        name.placeholder = "Telefone"
         name.textColor = .textColor
         name.font = .systemFont(ofSize: 20, weight: .regular)
         return name
     }()
+    
+    private func generatePicker() -> UIView {
+        let datePicker = UIDatePicker()
+        datePicker.datePickerMode = .date
+        datePicker.locale = Locale(identifier: "pt_BR")
+        
+        if #available(iOS 13.4, *) {
+            datePicker.preferredDatePickerStyle = .wheels
+        } else {
+            // Fallback on earlier versions
+        }
+        
+        datePicker.addTarget(self, action: #selector(handleDatePicker), for: .valueChanged)
+        return datePicker
+    }
+    
+    @objc func handleDatePicker(_ datePicker: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "pt_BR")
+        dateFormatter.dateStyle = .long
+        dateFormatter.timeStyle = .none
+        birthDate.text = dateFormatter.string(from: datePicker.date)
+    }
 
     func setupConstraints() {
 
@@ -186,7 +207,8 @@ class NewBirthdayView: UIView {
         self.addSubview(nameLabel)
         NSLayoutConstraint.activate([
             nameLabel.topAnchor.constraint(equalTo: personIcon.topAnchor),
-            nameLabel.leadingAnchor.constraint(equalTo: personIcon.trailingAnchor, constant: 8)
+            nameLabel.leadingAnchor.constraint(equalTo: personIcon.trailingAnchor, constant: 8),
+            nameLabel.widthAnchor.constraint(equalToConstant: 300)
         ])
         
         self.addSubview(birthView)
@@ -207,8 +229,9 @@ class NewBirthdayView: UIView {
         
         self.addSubview(birthDate)
         NSLayoutConstraint.activate([
-            birthDate.centerYAnchor.constraint(equalTo: birthIcon.centerYAnchor),
-            birthDate.leadingAnchor.constraint(equalTo: birthIcon.trailingAnchor, constant: 8)
+            birthDate.topAnchor.constraint(equalTo: birthIcon.topAnchor),
+            birthDate.leadingAnchor.constraint(equalTo: birthIcon.trailingAnchor, constant: 8),
+            birthDate.widthAnchor.constraint(equalToConstant: 300)
         ])
         
         self.addSubview(numberView)
@@ -230,7 +253,8 @@ class NewBirthdayView: UIView {
         self.addSubview(numberLabel)
         NSLayoutConstraint.activate([
             numberLabel.topAnchor.constraint(equalTo: numberIcon.topAnchor),
-            numberLabel.leadingAnchor.constraint(equalTo: numberIcon.trailingAnchor, constant: 8)
+            numberLabel.leadingAnchor.constraint(equalTo: numberIcon.trailingAnchor, constant: 8),
+            numberLabel.widthAnchor.constraint(equalToConstant: 300)
         ])
 
     }

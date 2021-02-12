@@ -19,6 +19,16 @@
 		E666E50625D1841E00062E4A /* InitialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666E50525D1841E00062E4A /* InitialTableViewCell.swift */; };
 		E666E50F25D2CFD800062E4A /* NewBirthdayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666E50E25D2CFD800062E4A /* NewBirthdayView.swift */; };
 		E666E51425D3243F00062E4A /* NewBirthdayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666E51325D3243F00062E4A /* NewBirthdayViewController.swift */; };
+		E666E52C25D483F900062E4A /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666E52B25D483F900062E4A /* CoreDataStack.swift */; };
+		E666E52F25D4891700062E4A /* RepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666E52E25D4891700062E4A /* RepositoryProtocol.swift */; };
+		E666E53525D489C600062E4A /* BirthdayBiding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666E53425D489C600062E4A /* BirthdayBiding.swift */; };
+		E666E53925D54F3500062E4A /* BirthdayRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666E53825D54F3500062E4A /* BirthdayRepository.swift */; };
+		E666E53E25D5576600062E4A /* NewBirthdayViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666E53D25D5576600062E4A /* NewBirthdayViewModelProtocol.swift */; };
+		E666E54125D557FC00062E4A /* NewBirthdayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666E54025D557FC00062E4A /* NewBirthdayViewModel.swift */; };
+		E666E54625D5A5A400062E4A /* InitialProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666E54525D5A5A400062E4A /* InitialProtocol.swift */; };
+		E666E54C25D5A6C900062E4A /* InitialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666E54B25D5A6C900062E4A /* InitialViewModel.swift */; };
+		E666E54F25D5B92D00062E4A /* FixOrientationImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666E54E25D5B92D00062E4A /* FixOrientationImage.swift */; };
+		E666E55225D5DEF200062E4A /* NewBirthdayDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666E55125D5DEF200062E4A /* NewBirthdayDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +46,17 @@
 		E666E50525D1841E00062E4A /* InitialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialTableViewCell.swift; sourceTree = "<group>"; };
 		E666E50E25D2CFD800062E4A /* NewBirthdayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBirthdayView.swift; sourceTree = "<group>"; };
 		E666E51325D3243F00062E4A /* NewBirthdayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBirthdayViewController.swift; sourceTree = "<group>"; };
+		E666E52B25D483F900062E4A /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		E666E52E25D4891700062E4A /* RepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryProtocol.swift; sourceTree = "<group>"; };
+		E666E53425D489C600062E4A /* BirthdayBiding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayBiding.swift; sourceTree = "<group>"; };
+		E666E53825D54F3500062E4A /* BirthdayRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayRepository.swift; sourceTree = "<group>"; };
+		E666E53D25D5576600062E4A /* NewBirthdayViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBirthdayViewModelProtocol.swift; sourceTree = "<group>"; };
+		E666E54025D557FC00062E4A /* NewBirthdayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBirthdayViewModel.swift; sourceTree = "<group>"; };
+		E666E54525D5A5A400062E4A /* InitialProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialProtocol.swift; sourceTree = "<group>"; };
+		E666E54B25D5A6C900062E4A /* InitialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewModel.swift; sourceTree = "<group>"; };
+		E666E54E25D5B92D00062E4A /* FixOrientationImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixOrientationImage.swift; sourceTree = "<group>"; };
+		E666E55125D5DEF200062E4A /* NewBirthdayDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBirthdayDelegate.swift; sourceTree = "<group>"; };
+		E666E55425D5F1F700062E4A /* Balloons.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Balloons.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +89,7 @@
 		E666E4CF25D1666C00062E4A /* Balloons */ = {
 			isa = PBXGroup;
 			children = (
+				E666E55425D5F1F700062E4A /* Balloons.entitlements */,
 				E666E4F525D17A8900062E4A /* View */,
 				E666E4F725D17A9700062E4A /* ViewModel */,
 				E666E4F625D17A8F00062E4A /* Model */,
@@ -83,8 +105,8 @@
 		E666E4F525D17A8900062E4A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E666E54425D5A54400062E4A /* InitialView */,
 				E666E52725D42A2C00062E4A /* NewBirthdayView */,
-				E666E52625D429F100062E4A /* ViewBirhdays */,
 				E666E4DE25D1666D00062E4A /* LaunchScreen.storyboard */,
 			);
 			path = View;
@@ -93,6 +115,9 @@
 		E666E4F625D17A8F00062E4A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E666E52B25D483F900062E4A /* CoreDataStack.swift */,
+				E666E53425D489C600062E4A /* BirthdayBiding.swift */,
+				E666E53825D54F3500062E4A /* BirthdayRepository.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,6 +125,8 @@
 		E666E4F725D17A9700062E4A /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E666E54025D557FC00062E4A /* NewBirthdayViewModel.swift */,
+				E666E54B25D5A6C900062E4A /* InitialViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -107,8 +134,8 @@
 		E666E4F825D17ACF00062E4A /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				E666E4FA25D17BC900062E4A /* Colors.swift */,
-				E666E4FE25D181BE00062E4A /* Font.swift */,
+				E666E53325D489A300062E4A /* Protocols */,
+				E666E53125D4899B00062E4A /* Extensions */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -122,16 +149,6 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
-		E666E52625D429F100062E4A /* ViewBirhdays */ = {
-			isa = PBXGroup;
-			children = (
-				E666E4D425D1666C00062E4A /* InitialViewController.swift */,
-				E666E50125D1827400062E4A /* InitialView.swift */,
-				E666E50525D1841E00062E4A /* InitialTableViewCell.swift */,
-			);
-			path = ViewBirhdays;
-			sourceTree = "<group>";
-		};
 		E666E52725D42A2C00062E4A /* NewBirthdayView */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +156,37 @@
 				E666E50E25D2CFD800062E4A /* NewBirthdayView.swift */,
 			);
 			path = NewBirthdayView;
+			sourceTree = "<group>";
+		};
+		E666E53125D4899B00062E4A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E666E4FA25D17BC900062E4A /* Colors.swift */,
+				E666E4FE25D181BE00062E4A /* Font.swift */,
+				E666E54E25D5B92D00062E4A /* FixOrientationImage.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E666E53325D489A300062E4A /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				E666E52E25D4891700062E4A /* RepositoryProtocol.swift */,
+				E666E53D25D5576600062E4A /* NewBirthdayViewModelProtocol.swift */,
+				E666E54525D5A5A400062E4A /* InitialProtocol.swift */,
+				E666E55125D5DEF200062E4A /* NewBirthdayDelegate.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		E666E54425D5A54400062E4A /* InitialView */ = {
+			isa = PBXGroup;
+			children = (
+				E666E4D425D1666C00062E4A /* InitialViewController.swift */,
+				E666E50125D1827400062E4A /* InitialView.swift */,
+				E666E50525D1841E00062E4A /* InitialTableViewCell.swift */,
+			);
+			path = InitialView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,13 +280,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				E666E4D525D1666C00062E4A /* InitialViewController.swift in Sources */,
+				E666E53E25D5576600062E4A /* NewBirthdayViewModelProtocol.swift in Sources */,
+				E666E54125D557FC00062E4A /* NewBirthdayViewModel.swift in Sources */,
 				E666E4FB25D17BC900062E4A /* Colors.swift in Sources */,
+				E666E53925D54F3500062E4A /* BirthdayRepository.swift in Sources */,
+				E666E54C25D5A6C900062E4A /* InitialViewModel.swift in Sources */,
 				E666E51425D3243F00062E4A /* NewBirthdayViewController.swift in Sources */,
 				E666E50625D1841E00062E4A /* InitialTableViewCell.swift in Sources */,
 				E666E50F25D2CFD800062E4A /* NewBirthdayView.swift in Sources */,
+				E666E52F25D4891700062E4A /* RepositoryProtocol.swift in Sources */,
 				E666E4FF25D181BE00062E4A /* Font.swift in Sources */,
+				E666E52C25D483F900062E4A /* CoreDataStack.swift in Sources */,
 				E666E4D125D1666C00062E4A /* AppDelegate.swift in Sources */,
+				E666E54625D5A5A400062E4A /* InitialProtocol.swift in Sources */,
 				E666E4D325D1666C00062E4A /* SceneDelegate.swift in Sources */,
+				E666E54F25D5B92D00062E4A /* FixOrientationImage.swift in Sources */,
+				E666E55225D5DEF200062E4A /* NewBirthdayDelegate.swift in Sources */,
+				E666E53525D489C600062E4A /* BirthdayBiding.swift in Sources */,
 				E666E50225D1827400062E4A /* InitialView.swift in Sources */,
 				E666E4DB25D1666C00062E4A /* Balloons.xcdatamodeld in Sources */,
 			);
@@ -379,6 +437,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Balloons/Balloons.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QQK85Y8S7P;
 				INFOPLIST_FILE = Balloons/Info.plist;
@@ -389,7 +448,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.brenaamorim.Balloons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -398,6 +457,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Balloons/Balloons.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QQK85Y8S7P;
 				INFOPLIST_FILE = Balloons/Info.plist;
@@ -408,7 +468,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.brenaamorim.Balloons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

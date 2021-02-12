@@ -42,6 +42,7 @@ class InitialTableViewCell: UITableViewCell {
         var image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
         image.backgroundColor = .black
+        image.layer.masksToBounds = true
         image.layer.cornerRadius = 42
         image.contentMode = .scaleAspectFill
         return image
@@ -50,8 +51,11 @@ class InitialTableViewCell: UITableViewCell {
     lazy var name: UILabel = {
         var name = UILabel()
         name.translatesAutoresizingMaskIntoConstraints = false
-        name.text = "Maria"
+        name.text = " "
+        name.minimumScaleFactor = 0.7
+        name.numberOfLines = 0
         name.textColor = .textColor
+        name.textAlignment = .left
         name.font = .roundedFont(ofSize: 28, weight: .semibold)
         return name
     }()
@@ -59,7 +63,7 @@ class InitialTableViewCell: UITableViewCell {
     lazy var age: UILabel = {
         var age = UILabel()
         age.translatesAutoresizingMaskIntoConstraints = false
-        age.text = "18 anos"
+        age.text = " "
         age.textColor = .textColor
         age.font = .systemFont(ofSize: 22, weight: .light)
         return age
@@ -77,7 +81,7 @@ class InitialTableViewCell: UITableViewCell {
     lazy var birthday: UILabel = {
         var birthday = UILabel()
         birthday.translatesAutoresizingMaskIntoConstraints = false
-        birthday.text = "9 Fevereiro"
+        birthday.text = " "
         birthday.textColor = .textColor
         birthday.font = .systemFont(ofSize: 22, weight: .light)
         return birthday
@@ -104,7 +108,8 @@ class InitialTableViewCell: UITableViewCell {
         self.addSubview(name)
         NSLayoutConstraint.activate([
             name.topAnchor.constraint(equalTo: personImage.topAnchor, constant: 12),
-            name.leadingAnchor.constraint(equalTo: personImage.trailingAnchor, constant: 16)
+            name.leadingAnchor.constraint(equalTo: personImage.trailingAnchor, constant: 16),
+            name.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: 16)
         ])
         
         self.addSubview(age)

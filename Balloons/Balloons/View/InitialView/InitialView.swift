@@ -51,7 +51,16 @@ class InitialView: UIView {
     lazy var monthLabel: UILabel = {
         var name = UILabel()
         name.translatesAutoresizingMaskIntoConstraints = false
-        name.text = "Fevereiro"
+        
+        var dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "pt_BR")
+        
+        var calendar = Calendar.current
+        calendar.locale = Locale(identifier: "pt_BR")
+        let month = calendar.component(.month, from: Date())
+        let monthName = dateFormatter.monthSymbols[month - 1]
+
+        name.text = monthName
         name.textColor = .textColor
         name.font = .roundedFont(ofSize: 28, weight: .bold)
         return name
@@ -71,14 +80,14 @@ class InitialView: UIView {
         NSLayoutConstraint.activate([
             monthView.topAnchor.constraint(equalTo: self.topAnchor, constant: 148),
             monthView.leadingAnchor.constraint(equalTo: backgroundImage.leadingAnchor, constant: 14),
-            monthView.widthAnchor.constraint(equalToConstant: 141),
+            monthView.widthAnchor.constraint(equalToConstant: 161),
             monthView.heightAnchor.constraint(equalToConstant: 34)
         ])
 
         self.addSubview(monthLabel)
         NSLayoutConstraint.activate([
             monthLabel.topAnchor.constraint(equalTo: monthView.topAnchor),
-            monthLabel.leadingAnchor.constraint(equalTo: monthView.leadingAnchor, constant: 10)
+            monthLabel.centerXAnchor.constraint(equalTo: monthView.centerXAnchor)
         ])
 
         self.addSubview(tableView)

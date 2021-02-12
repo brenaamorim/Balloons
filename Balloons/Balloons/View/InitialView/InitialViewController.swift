@@ -7,9 +7,9 @@
 
 import UIKit
 
-class InitialViewController: UIViewController, DataSource {
+class InitialViewController: UIViewController {
 
-    var dataSource = [Birthday]()
+    var getBirthdays = [Birthday]()
     let initialViewModel: InitialViewModel = InitialViewModel()
 
     var initialView: InitialView = {
@@ -25,6 +25,9 @@ class InitialViewController: UIViewController, DataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Aniversariantes"
+        
+        getBirthdays = initialViewModel.reloadDataSource()
+        
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
     }
@@ -33,14 +36,17 @@ class InitialViewController: UIViewController, DataSource {
         super.viewWillAppear(true)
 //        let vc2 = NewBirthdayViewController()
 //        vc2.delegate = self
+        getBirthdays =
+            initialViewModel.reloadDataSource()
         self.initialView.tableView.reloadData()
     }
 
-    func passBirthday(data: [Birthday]) {
-        self.dataSource = data
-        self.initialView.tableView.reloadData()
-        print("InitialView")
-    }
+    //tentativa de delegate
+//    func passBirthday(data: [Birthday]) {
+//        self.dataSource = data
+//        self.initialView.tableView.reloadData()
+//        print("InitialView")
+//    }
 
     @objc func addTapped () {
         // modal present with navigation
@@ -58,7 +64,7 @@ class InitialViewController: UIViewController, DataSource {
 extension InitialViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return initialViewModel.numberOfRows()
+        return getBirthdays.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -66,7 +72,7 @@ extension InitialViewController: UITableViewDelegate, UITableViewDataSource {
             return InitialTableViewCell()
         }
 
-        let data = initialViewModel.getAllCellsData()
+        let data = getBirthdays
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "pt_BR")
         

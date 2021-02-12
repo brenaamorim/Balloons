@@ -25,8 +25,8 @@ class NewBirthdayViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        let readAll = birthdayViewModel.reloadDataSource()
-        passBirthday(data: readAll)
+
+//        passBirthday(data: readAll)
 //        let vc2 = InitialViewController()
 //        vc2.delegate = self
 //        vc2.delegate!.passBirthday(data: readAll)
@@ -129,13 +129,13 @@ extension UIViewController {
 }
 
 // Trying to delegate D:
-extension NewBirthdayViewController: DataSource {
-    func passBirthday(data: [Birthday]) {
-        destination.dataSource = data
-        
-        present(destination, animated: true, completion: nil)
-    }
-}
+//extension NewBirthdayViewController: DataSource {
+//    func passBirthday(data: [Birthday]) {
+//        destination.dataSource = data
+//        
+//        present(destination, animated: true, completion: nil)
+//    }
+//}
 
 // Defining source type for friends image
 extension NewBirthdayViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

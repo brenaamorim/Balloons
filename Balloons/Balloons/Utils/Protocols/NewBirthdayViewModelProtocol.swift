@@ -9,6 +9,5 @@ import Foundation
 
 protocol NewBirthdayViewModelProtocol {
     func saveBirthday(birthday: BirthdayBiding) -> Bool
-    func updateBirthday(birthday: Birthday) -> Bool
-    func reloadDataSource() -> [Birthday]
+    func updateBirthday(birthday: Birthday, birthdayUpdate: BirthdayBiding) -> Bool
 }

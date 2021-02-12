@@ -15,6 +15,6 @@ protocol RepositoryProtocol {
     func create(data: A) -> Bool
     func read(identifier: String) -> T?
     func readAll() -> [T]
-    func update(model: T) -> Bool
+    func update(model: T, newData: A) -> Bool
     func delete(identifier: String) -> Bool
 }

@@ -9,18 +9,14 @@ import Foundation
 
 class NewBirthdayViewModel: NewBirthdayViewModelProtocol {
     
-    private let birthdayRepository = BirthdayRepository(managedObjectContext: CoreDataStack.shared.mainContext, coreDataStack: CoreDataStack.shared)
+    var birthdayRepository = BirthdayRepository(managedObjectContext: CoreDataStack.shared.mainContext, coreDataStack: CoreDataStack.shared)
 
     func saveBirthday(birthday: BirthdayBiding) -> Bool {
         return self.birthdayRepository.create(data: birthday)
     }
     
-    func updateBirthday(birthday: Birthday) -> Bool {
-        return self.birthdayRepository.update(model: birthday)
-    }
-    
-    func reloadDataSource() -> [Birthday] {
-        return self.birthdayRepository.readAll()
+    func updateBirthday(birthday: Birthday, birthdayUpdate: BirthdayBiding) -> Bool {
+        return self.birthdayRepository.update(model: birthday, newData: birthdayUpdate)
     }
 
 }

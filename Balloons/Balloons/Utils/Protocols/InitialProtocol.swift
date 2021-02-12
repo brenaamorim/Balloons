@@ -8,7 +8,7 @@
 import Foundation
 
 protocol InitialViewModelProtocol {
-    func numberOfRows() -> Int
-    func getAllCellsData() -> [Birthday]
+//r    func getAllCellsData() -> [Birthday]
     func calculateAge(year: Int) -> Int
+    func reloadDataSource() -> [Birthday]
 }

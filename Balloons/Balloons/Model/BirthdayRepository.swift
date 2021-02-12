@@ -77,18 +77,18 @@ class BirthdayRepository: RepositoryProtocol {
         }
     }
     
-    func update(model: Birthday) -> Bool {
+    func update(model: Birthday, newData: BirthdayBiding) -> Bool {
         let birthdayFetchRequest: NSFetchRequest<Birthday> = Birthday.fetchRequest()
-        birthdayFetchRequest.predicate = NSPredicate(format: "identifier == %@", model.id!)
+        birthdayFetchRequest.predicate = NSPredicate(format: "id == %@", model.id!)
         
         do {
             let getBirthday = try coreDataStack.mainContext.fetch(birthdayFetchRequest)
             if getBirthday.count > 0 {
                 let objectUpdate = getBirthday[0] as NSManagedObject
-                objectUpdate.setValue(model.photo, forKey: "photo")
-                objectUpdate.setValue(model.name, forKey: "name")
-                objectUpdate.setValue(model.birthDate, forKey: "birthDate")
-                objectUpdate.setValue(model.phoneNumber, forKey: "phoneNumber")
+                objectUpdate.setValue(newData.photo, forKey: "photo")
+                objectUpdate.setValue(newData.name, forKey: "name")
+                objectUpdate.setValue(newData.birth, forKey: "birthDate")
+                objectUpdate.setValue(newData.phoneNumber, forKey: "phoneNumber")
             } else {
                 return false
             }
@@ -108,7 +108,7 @@ class BirthdayRepository: RepositoryProtocol {
     
     func delete(identifier: String) -> Bool {
         let birthdayFetchRequest: NSFetchRequest<Birthday> = Birthday.fetchRequest()
-        birthdayFetchRequest.predicate = NSPredicate(format: "identifier == %@", identifier)
+        birthdayFetchRequest.predicate = NSPredicate(format: "id == %@", identifier)
         
         do {
             let getBirthday = try coreDataStack.mainContext.fetch(birthdayFetchRequest)

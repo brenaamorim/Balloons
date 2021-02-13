@@ -13,7 +13,7 @@ class NewBirthdayViewController: UIViewController, UITextFieldDelegate {
     let imagePickerController = UIImagePickerController()
     let destination = InitialViewController()
 
-//    var delegate: DataSource?
+    weak var delegate: BirthdayDelegate?
     
     var newBirthday: NewBirthdayView = {
         let view = NewBirthdayView()
@@ -23,16 +23,7 @@ class NewBirthdayViewController: UIViewController, UITextFieldDelegate {
     override func loadView() {
         view = newBirthday
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
 
-//        passBirthday(data: readAll)
-//        let vc2 = InitialViewController()
-//        vc2.delegate = self
-//        vc2.delegate!.passBirthday(data: readAll)
-        print("NewBirthday")
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Adicionar Aniversário"
@@ -80,7 +71,6 @@ class NewBirthdayViewController: UIViewController, UITextFieldDelegate {
     @objc func save() {
         if let birthday = captureUserEntry() {
             if self.birthdayViewModel.saveBirthday(birthday: birthday) {
-                print("Birthday saved!")
             } else {
                 let alert = UIAlertController(title: "Ops!", message: "Ocorreu um erro ao adicionar um aniversário", preferredStyle: .alert)
                 let dismissAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
@@ -88,7 +78,10 @@ class NewBirthdayViewController: UIViewController, UITextFieldDelegate {
                 self.present(alert, animated: true, completion: nil)
             }
         }
+
+        delegate?.passBirthdayData()
         navigationController?.dismiss(animated: true, completion: nil)
+
     }
     
     @objc func dismissNB() {
@@ -127,15 +120,6 @@ extension UIViewController {
         view.endEditing(true)
     }
 }
-
-// Trying to delegate D:
-//extension NewBirthdayViewController: DataSource {
-//    func passBirthday(data: [Birthday]) {
-//        destination.dataSource = data
-//        
-//        present(destination, animated: true, completion: nil)
-//    }
-//}
 
 // Defining source type for friends image
 extension NewBirthdayViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {

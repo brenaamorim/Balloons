@@ -35,6 +35,7 @@
 		E6BD1EE225D6D10E003260F4 /* NewBirthdayViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BD1EE125D6D10E003260F4 /* NewBirthdayViewModelTests.swift */; };
 		E6BD1EE625D6D936003260F4 /* InitialViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BD1EE525D6D936003260F4 /* InitialViewModelTests.swift */; };
 		E6BD1EF025D6D95D003260F4 /* BalloonsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BD1EEF25D6D95D003260F4 /* BalloonsUITests.swift */; };
+		E6BD1EFB25D80ABA003260F4 /* BirthdayDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BD1EFA25D80ABA003260F4 /* BirthdayDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		E6BD1EED25D6D95D003260F4 /* BalloonsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BalloonsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6BD1EEF25D6D95D003260F4 /* BalloonsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonsUITests.swift; sourceTree = "<group>"; };
 		E6BD1EF125D6D95D003260F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6BD1EFA25D80ABA003260F4 /* BirthdayDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 				E666E53D25D5576600062E4A /* NewBirthdayViewModelProtocol.swift */,
 				E666E54525D5A5A400062E4A /* InitialProtocol.swift */,
 				E666E55125D5DEF200062E4A /* NewBirthdayDelegate.swift */,
+				E6BD1EFA25D80ABA003260F4 /* BirthdayDelegate.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				E666E55225D5DEF200062E4A /* NewBirthdayDelegate.swift in Sources */,
 				E666E53525D489C600062E4A /* BirthdayBiding.swift in Sources */,
 				E666E50225D1827400062E4A /* InitialView.swift in Sources */,
+				E6BD1EFB25D80ABA003260F4 /* BirthdayDelegate.swift in Sources */,
 				E666E4DB25D1666C00062E4A /* Balloons.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

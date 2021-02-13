@@ -7,7 +7,12 @@
 
 import UIKit
 
-class InitialViewController: UIViewController {
+class InitialViewController: UIViewController, BirthdayDelegate {
+    
+    func passBirthdayData() {
+        getBirthdays = initialViewModel.reloadDataSource()
+        initialView.tableView.reloadData()
+    }
 
     var getBirthdays = [Birthday]()
     let initialViewModel: InitialViewModel = InitialViewModel()
@@ -32,25 +37,12 @@ class InitialViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addTapped))
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-//        let vc2 = NewBirthdayViewController()
-//        vc2.delegate = self
-        getBirthdays =
-            initialViewModel.reloadDataSource()
-        self.initialView.tableView.reloadData()
-    }
-
-    //tentativa de delegate
-//    func passBirthday(data: [Birthday]) {
-//        self.dataSource = data
-//        self.initialView.tableView.reloadData()
-//        print("InitialView")
-//    }
-
     @objc func addTapped () {
         // modal present with navigation
-        let navController = UINavigationController(rootViewController: NewBirthdayViewController())
+        
+        let newBirthdayVC = NewBirthdayViewController()
+        newBirthdayVC.delegate = self
+        let navController = UINavigationController(rootViewController: newBirthdayVC)
         self.present(navController, animated: true, completion: nil)
     }
 

@@ -43,6 +43,7 @@ class InitialTableViewCell: UITableViewCell {
         image.translatesAutoresizingMaskIntoConstraints = false
         image.backgroundColor = .black
         image.layer.masksToBounds = true
+        // Deixa a imagem circular
         image.layer.cornerRadius = 42
         image.contentMode = .scaleAspectFill
         return image

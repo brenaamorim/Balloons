@@ -25,7 +25,7 @@
 		E666E53925D54F3500062E4A /* BirthdayRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666E53825D54F3500062E4A /* BirthdayRepository.swift */; };
 		E666E53E25D5576600062E4A /* NewBirthdayViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666E53D25D5576600062E4A /* NewBirthdayViewModelProtocol.swift */; };
 		E666E54125D557FC00062E4A /* NewBirthdayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666E54025D557FC00062E4A /* NewBirthdayViewModel.swift */; };
-		E666E54625D5A5A400062E4A /* InitialProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666E54525D5A5A400062E4A /* InitialProtocol.swift */; };
+		E666E54625D5A5A400062E4A /* InitialViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666E54525D5A5A400062E4A /* InitialViewModelProtocol.swift */; };
 		E666E54C25D5A6C900062E4A /* InitialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666E54B25D5A6C900062E4A /* InitialViewModel.swift */; };
 		E666E54F25D5B92D00062E4A /* FixOrientationImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666E54E25D5B92D00062E4A /* FixOrientationImage.swift */; };
 		E666E55225D5DEF200062E4A /* NewBirthdayDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666E55125D5DEF200062E4A /* NewBirthdayDelegate.swift */; };
@@ -36,6 +36,7 @@
 		E6BD1EE625D6D936003260F4 /* InitialViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BD1EE525D6D936003260F4 /* InitialViewModelTests.swift */; };
 		E6BD1EF025D6D95D003260F4 /* BalloonsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BD1EEF25D6D95D003260F4 /* BalloonsUITests.swift */; };
 		E6BD1EFB25D80ABA003260F4 /* BirthdayDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BD1EFA25D80ABA003260F4 /* BirthdayDelegate.swift */; };
+		E6BD1F1325D86F53003260F4 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BD1F1225D86F53003260F4 /* Text.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,7 +77,7 @@
 		E666E53825D54F3500062E4A /* BirthdayRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayRepository.swift; sourceTree = "<group>"; };
 		E666E53D25D5576600062E4A /* NewBirthdayViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBirthdayViewModelProtocol.swift; sourceTree = "<group>"; };
 		E666E54025D557FC00062E4A /* NewBirthdayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBirthdayViewModel.swift; sourceTree = "<group>"; };
-		E666E54525D5A5A400062E4A /* InitialProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialProtocol.swift; sourceTree = "<group>"; };
+		E666E54525D5A5A400062E4A /* InitialViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewModelProtocol.swift; sourceTree = "<group>"; };
 		E666E54B25D5A6C900062E4A /* InitialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewModel.swift; sourceTree = "<group>"; };
 		E666E54E25D5B92D00062E4A /* FixOrientationImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixOrientationImage.swift; sourceTree = "<group>"; };
 		E666E55125D5DEF200062E4A /* NewBirthdayDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBirthdayDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +93,7 @@
 		E6BD1EEF25D6D95D003260F4 /* BalloonsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonsUITests.swift; sourceTree = "<group>"; };
 		E6BD1EF125D6D95D003260F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E6BD1EFA25D80ABA003260F4 /* BirthdayDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayDelegate.swift; sourceTree = "<group>"; };
+		E6BD1F1225D86F53003260F4 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 				E666E4FA25D17BC900062E4A /* Colors.swift */,
 				E666E4FE25D181BE00062E4A /* Font.swift */,
 				E666E54E25D5B92D00062E4A /* FixOrientationImage.swift */,
+				E6BD1F1225D86F53003260F4 /* Text.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -226,7 +229,7 @@
 			children = (
 				E666E52E25D4891700062E4A /* RepositoryProtocol.swift */,
 				E666E53D25D5576600062E4A /* NewBirthdayViewModelProtocol.swift */,
-				E666E54525D5A5A400062E4A /* InitialProtocol.swift */,
+				E666E54525D5A5A400062E4A /* InitialViewModelProtocol.swift */,
 				E666E55125D5DEF200062E4A /* NewBirthdayDelegate.swift */,
 				E6BD1EFA25D80ABA003260F4 /* BirthdayDelegate.swift */,
 			);
@@ -428,13 +431,14 @@
 				E666E4FF25D181BE00062E4A /* Font.swift in Sources */,
 				E666E52C25D483F900062E4A /* CoreDataStack.swift in Sources */,
 				E666E4D125D1666C00062E4A /* AppDelegate.swift in Sources */,
-				E666E54625D5A5A400062E4A /* InitialProtocol.swift in Sources */,
+				E666E54625D5A5A400062E4A /* InitialViewModelProtocol.swift in Sources */,
 				E666E4D325D1666C00062E4A /* SceneDelegate.swift in Sources */,
 				E666E54F25D5B92D00062E4A /* FixOrientationImage.swift in Sources */,
 				E666E55225D5DEF200062E4A /* NewBirthdayDelegate.swift in Sources */,
 				E666E53525D489C600062E4A /* BirthdayBiding.swift in Sources */,
 				E666E50225D1827400062E4A /* InitialView.swift in Sources */,
 				E6BD1EFB25D80ABA003260F4 /* BirthdayDelegate.swift in Sources */,
+				E6BD1F1325D86F53003260F4 /* Text.swift in Sources */,
 				E666E4DB25D1666C00062E4A /* Balloons.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -615,6 +619,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brenaamorim.Balloons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -635,6 +640,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brenaamorim.Balloons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

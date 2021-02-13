@@ -60,7 +60,7 @@ class InitialView: UIView {
         let month = calendar.component(.month, from: Date())
         let monthName = dateFormatter.monthSymbols[month - 1]
 
-        name.text = monthName
+        name.text = monthName.capitalizingFirstLetter()
         name.textColor = .textColor
         name.font = .roundedFont(ofSize: 28, weight: .bold)
         return name

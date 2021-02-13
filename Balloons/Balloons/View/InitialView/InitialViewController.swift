@@ -7,12 +7,7 @@
 
 import UIKit
 
-class InitialViewController: UIViewController, BirthdayDelegate {
-    
-    func passBirthdayData() {
-        getBirthdays = initialViewModel.reloadDataSource()
-        initialView.tableView.reloadData()
-    }
+class InitialViewController: UIViewController {
 
     var getBirthdays = [Birthday]()
     let initialViewModel: InitialViewModel = InitialViewModel()
@@ -53,6 +48,16 @@ class InitialViewController: UIViewController, BirthdayDelegate {
 
 }
 
+extension InitialViewController: BirthdayDelegate {
+
+    func passBirthdayData() {
+        getBirthdays = initialViewModel.reloadDataSource()
+        initialView.tableView.reloadData()
+        print("Data Reload!")
+    }
+
+}
+
 extension InitialViewController: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -78,8 +83,8 @@ extension InitialViewController: UITableViewDelegate, UITableViewDataSource {
         if month == currentMonth {
             if let image = data[indexPath.row].photo {
                 let getImage = UIImage(data: image)
-//                image.
 
+//                let imgeUp = getImage?.fixOrientation(img: getImage!)
                 cell.personImage.image = getImage
                 cell.name.text = data[indexPath.row].name
                 cell.birthday.text = String(day) + " " + String(monthName)
@@ -88,6 +93,36 @@ extension InitialViewController: UITableViewDelegate, UITableViewDataSource {
         }
 
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let controller = NewBirthdayViewController()
+        let navController = UINavigationController(rootViewController: controller)
+
+        guard let cellData = initialViewModel.getCellData(forIndex: indexPath.row, birthdays: getBirthdays) else { return }
+        controller.birthdayViewModel.birthdayData = cellData
+
+        self.navigationController?.present(navController, animated: true, completion: nil)
+    }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            tableView.beginUpdates()
+
+            guard let birthdayId = getBirthdays[indexPath.row].id else {return}
+            _ = initialViewModel.deleteBirthday(identifier: birthdayId)
+            getBirthdays = initialViewModel.reloadDataSource()
+            tableView.deleteRows(at: [indexPath], with: .fade)
+
+            tableView.endUpdates()
+                
+        }
+    
     }
 
 }

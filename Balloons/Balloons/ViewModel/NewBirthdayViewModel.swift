@@ -8,6 +8,8 @@
 import Foundation
 
 class NewBirthdayViewModel: NewBirthdayViewModelProtocol {
+
+    var birthdayData: Birthday?
     
     var birthdayRepository = BirthdayRepository(managedObjectContext: CoreDataStack.shared.mainContext, coreDataStack: CoreDataStack.shared)
 

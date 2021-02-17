@@ -53,7 +53,6 @@ extension InitialViewController: BirthdayDelegate {
     func passBirthdayData() {
         getBirthdays = initialViewModel.reloadDataSource()
         initialView.tableView.reloadData()
-        print("Data Reload!")
     }
 
 }
@@ -84,7 +83,6 @@ extension InitialViewController: UITableViewDelegate, UITableViewDataSource {
             if let image = data[indexPath.row].photo {
                 let getImage = UIImage(data: image)
 
-//                let imgeUp = getImage?.fixOrientation(img: getImage!)
                 cell.personImage.image = getImage
                 cell.name.text = data[indexPath.row].name
                 cell.birthday.text = String(day) + " " + String(monthName)

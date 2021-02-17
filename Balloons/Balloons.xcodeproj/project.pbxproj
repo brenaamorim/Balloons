@@ -27,7 +27,6 @@
 		E666E54125D557FC00062E4A /* NewBirthdayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666E54025D557FC00062E4A /* NewBirthdayViewModel.swift */; };
 		E666E54625D5A5A400062E4A /* InitialViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666E54525D5A5A400062E4A /* InitialViewModelProtocol.swift */; };
 		E666E54C25D5A6C900062E4A /* InitialViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666E54B25D5A6C900062E4A /* InitialViewModel.swift */; };
-		E666E54F25D5B92D00062E4A /* FixOrientationImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666E54E25D5B92D00062E4A /* FixOrientationImage.swift */; };
 		E666E55225D5DEF200062E4A /* NewBirthdayDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E666E55125D5DEF200062E4A /* NewBirthdayDelegate.swift */; };
 		E6BD1ED025D6B93C003260F4 /* BalloonsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BD1ECF25D6B93C003260F4 /* BalloonsTests.swift */; };
 		E6BD1EDA25D6B97A003260F4 /* BirthdayRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6BD1ED925D6B97A003260F4 /* BirthdayRepositoryTests.swift */; };
@@ -79,7 +78,6 @@
 		E666E54025D557FC00062E4A /* NewBirthdayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBirthdayViewModel.swift; sourceTree = "<group>"; };
 		E666E54525D5A5A400062E4A /* InitialViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewModelProtocol.swift; sourceTree = "<group>"; };
 		E666E54B25D5A6C900062E4A /* InitialViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewModel.swift; sourceTree = "<group>"; };
-		E666E54E25D5B92D00062E4A /* FixOrientationImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixOrientationImage.swift; sourceTree = "<group>"; };
 		E666E55125D5DEF200062E4A /* NewBirthdayDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBirthdayDelegate.swift; sourceTree = "<group>"; };
 		E666E55425D5F1F700062E4A /* Balloons.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Balloons.entitlements; sourceTree = "<group>"; };
 		E6BD1ECD25D6B93C003260F4 /* BalloonsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BalloonsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -218,7 +216,6 @@
 			children = (
 				E666E4FA25D17BC900062E4A /* Colors.swift */,
 				E666E4FE25D181BE00062E4A /* Font.swift */,
-				E666E54E25D5B92D00062E4A /* FixOrientationImage.swift */,
 				E6BD1F1225D86F53003260F4 /* Text.swift */,
 			);
 			path = Extensions;
@@ -250,11 +247,11 @@
 			isa = PBXGroup;
 			children = (
 				E6BD1ECF25D6B93C003260F4 /* BalloonsTests.swift */,
-				E6BD1ED125D6B93C003260F4 /* Info.plist */,
 				E6BD1ED925D6B97A003260F4 /* BirthdayRepositoryTests.swift */,
 				E6BD1EDD25D6B9FB003260F4 /* TestCoreDataStack.swift */,
 				E6BD1EE125D6D10E003260F4 /* NewBirthdayViewModelTests.swift */,
 				E6BD1EE525D6D936003260F4 /* InitialViewModelTests.swift */,
+				E6BD1ED125D6B93C003260F4 /* Info.plist */,
 			);
 			path = BalloonsTests;
 			sourceTree = "<group>";
@@ -433,7 +430,6 @@
 				E666E4D125D1666C00062E4A /* AppDelegate.swift in Sources */,
 				E666E54625D5A5A400062E4A /* InitialViewModelProtocol.swift in Sources */,
 				E666E4D325D1666C00062E4A /* SceneDelegate.swift in Sources */,
-				E666E54F25D5B92D00062E4A /* FixOrientationImage.swift in Sources */,
 				E666E55225D5DEF200062E4A /* NewBirthdayDelegate.swift in Sources */,
 				E666E53525D489C600062E4A /* BirthdayBiding.swift in Sources */,
 				E666E50225D1827400062E4A /* InitialView.swift in Sources */,
@@ -619,7 +615,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brenaamorim.Balloons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -640,7 +636,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.brenaamorim.Balloons;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

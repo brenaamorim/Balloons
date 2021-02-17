@@ -71,7 +71,7 @@ class NewBirthdayViewController: UIViewController, UITextFieldDelegate {
         dateFormatter.locale = Locale(identifier: "pt_BR")
         
         // png is personImage BinaryData
-        let photo = newBirthday.personImage.image?.pngData()
+        let photo = newBirthday.personImage.image?.jpegData(compressionQuality: 0.75)
         let name = newBirthday.nameLabel.text!
         guard let birth = newBirthday.birthDate.text else {return nil}
         let phoneNumber = newBirthday.numberLabel.text!
@@ -152,9 +152,9 @@ extension NewBirthdayViewController: UIImagePickerControllerDelegate, UINavigati
     func openImagePicker() {
         imagePickerController.delegate = self
         
-        let actionSheet = UIAlertController(title: "Photo Source", message: "Choose a source", preferredStyle: .actionSheet)
+        let actionSheet = UIAlertController(title: .none, message: .none, preferredStyle: .actionSheet)
         
-        actionSheet.addAction(UIAlertAction(title: "Câmera", style: .default, handler: { _ in
+        actionSheet.addAction(UIAlertAction(title: "Tirar foto", style: .default, handler: { _ in
             
             if UIImagePickerController.isSourceTypeAvailable(.camera) {
                 self.imagePickerController.sourceType = .camera
@@ -162,12 +162,12 @@ extension NewBirthdayViewController: UIImagePickerControllerDelegate, UINavigati
             }
         }))
         
-        actionSheet.addAction(UIAlertAction(title: "Photo Library", style: .default, handler: { _ in
+        actionSheet.addAction(UIAlertAction(title: "Escolher foto", style: .default, handler: { _ in
             self.imagePickerController.sourceType = .photoLibrary
             self.present(self.imagePickerController, animated: true, completion: nil)
         }))
         
-        actionSheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil ))
+        actionSheet.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil ))
         
         self.present(actionSheet, animated: true, completion: nil)
     }

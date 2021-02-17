@@ -50,5 +50,31 @@ class InitialViewModelTests: XCTestCase {
         XCTAssertEqual(sut[0].name, dataBirthday.name)
         
     }
+    
+    func test_getCellData_returnsBirthdayData() {
+        //given
+        _ = birthdayRepository.create(data: dataBirthday)
+        let birthdays = initialBirthdayViewModel.reloadDataSource()
+        
+        //when
+        let sut = initialBirthdayViewModel.getCellData(forIndex: 0, birthdays: birthdays)
+        
+        //then
+        XCTAssertNotNil(birthdays)
+        XCTAssertEqual(sut!.name, dataBirthday.name)
+    }
+    
+    func test_deleteBirthday_returnsTrue() {
+        //given
+        _ = birthdayRepository.create(data: dataBirthday)
+        let birthdays = initialBirthdayViewModel.reloadDataSource()
+        
+        //when
+        let sut = initialBirthdayViewModel.deleteBirthday(identifier: birthdays[0].id!)
+        
+        //then
+        XCTAssertNotNil(birthdays)
+        XCTAssertTrue(sut)
+    }
 
 }

@@ -41,10 +41,12 @@ class InitialTableViewCell: UITableViewCell {
     lazy var personImage: UIImageView = {
         var image = UIImageView()
         image.translatesAutoresizingMaskIntoConstraints = false
-        image.backgroundColor = .black
+//        let rect = CGRect(x: 0, y: 0, width: 86, height: 86)
+//        image.image?.draw(in: rect)
+        image.backgroundColor = .clear
         image.layer.masksToBounds = true
         // Deixa a imagem circular
-        image.layer.cornerRadius = 42
+        image.layer.cornerRadius = 43
         image.contentMode = .scaleAspectFill
         return image
     }()
